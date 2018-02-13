@@ -18,12 +18,12 @@ namespace WebAPIService.Controllers
 
         };
 
-        public IEnumerable<Product> GetAllProducts()
+        public IEnumerable<Product> GetAllProducts()    //      http://localhost:3660/api/products
         {
             return products;
         }
 
-        public IHttpActionResult GetProduct(int id)
+        public IHttpActionResult GetProduct(int id)      //         http://localhost:3660/api/products/id
         {
             var product = products.FirstOrDefault((p) => p.Id == id);
             if (product == null)
