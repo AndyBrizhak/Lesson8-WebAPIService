@@ -53,7 +53,7 @@ namespace WebAPIClient
                 HttpResponseMessage response = await client.GetAsync(path);
                 if (response.IsSuccessStatusCode)
                 {
-                    products = await response.Content.ReadAsAsync<IEnumerable<Products>>();
+                    products = await response.Content.ReadAsAsync<IEnumerable<Products>>();  //??
                 }
             }
             catch (Exception)
